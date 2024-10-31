@@ -14,8 +14,10 @@ def send_to_email(request):
         name = request.POST.dict()['name']
         email = request.POST.dict()['email']
         feedback = request.POST.dict()['feedback']
+        rating = request.POST.dict()['rating']
         try:
-            send_mail(name + "(" + email + ")", feedback, settings.EMAIL_HOST_USER, ['studysigns.project@mail.ru'])
+            subject = "studysignsproject"
+            send_mail(subject, "Имя: " + name + "\n" + "Почта " + email + "\n" + "Оценка сайта: " + rating + "\n" + "Отзыв: " + feedback, settings.EMAIL_HOST_USER, ['Nikkri20@yandex.ru'])
         except Exception:
             pass
 
