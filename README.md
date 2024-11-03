@@ -1,5 +1,4 @@
-## StudySignsProject
-## (Cайт для изучения студентами условных топографических знаков)
+## StudySignsProject (Cайт для изучения студентами условных топографических знаков)
 
 ![Снимок экрана 2024-03-19 150319](https://github.com/Nikkri20/StudySignsProject/assets/114663524/e918c86e-f8f4-4813-b7fe-00a006be71b6)
 ___
