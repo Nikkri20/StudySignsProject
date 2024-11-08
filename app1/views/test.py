@@ -1,90 +1,77 @@
+"""
+Модуль для получения данных о тестах и отправки их на фронтенд.
+
+Этот модуль содержит функцию `send_test`, которая извлекает вопросы и ответы из базы данных,
+распределяет их по сложности и отправляет их в формате JSON для использования на фронтенде.
+Тестовые вопросы и ответы проходят фильтрацию на пустые значения, и результат
+случайным образом сортируется.
+"""
+
 import random
-
 from django.http import JsonResponse
+from django.http import HttpRequest
+from app1.models import Test
+from typing import Dict, Any, List
 
-from app1.models import Sign, Test
-
-
-def send_test(request):
+def send_test(request: HttpRequest) -> JsonResponse:
     """
-    Данная функция берет из базы данных информацию о всех знаках и отправляет на фронтенд
+    Извлекает из базы данных информацию о тестах, удаляет пустые вопросы и ответы,
+    распределяет их по сложности, сортирует случайным образом и отправляет на фронтенд.
     """
-    data = Test.objects.all().values("complexity", "photo", "realObjectPhoto", "question1", "answer1", "question2",
-                                     "answer2",
-                                     "question3", "answer3", "question4", "answer4", "question5", "answer5")
-    questions = []
-    answers = []
-    textQuestions = []
-    answersList = []
+    data = Test.objects.all().values("complexity", "photo", "realObjectPhoto", 
+                                     "question1", "answer1", "question2", "answer2", 
+                                     "question3", "answer3", "question4", "answer4", 
+                                     "question5", "answer5")
+
+    data_from_database: Dict[str, Dict[str, Any]] = {}
+    textQuestions: List[List[str]] = []
+    answersList: List[List[str]] = []
+
     for row in data:
-        questions.append(row["question1"].lower())
-        questions.append(row["question2"].lower())
-        questions.append(row["question3"].lower())
-        questions.append(row["question4"].lower())
-        questions.append(row["question5"].lower())
-
-        answers.append(row["answer1"].lower())
-        answers.append(row["answer2"].lower())
-        answers.append(row["answer3"].lower())
-        answers.append(row["answer4"].lower())
-        answers.append(row["answer5"].lower())
-
-        count = 0
-        for i in questions:
-            if i == "":
-                count += 1
-        for i in range(count):
-            questions.remove("")
-
-        count = 0
-        for i in answers:
-            if i == "":
-                count += 1
-        for i in range(count):
-            answers.remove("")
+        questions = [q.lower() for q in [row["question1"], row["question2"], row["question3"], 
+                                         row["question4"], row["question5"]] if q]
+        answers = [a.lower() for a in [row["answer1"], row["answer2"], row["answer3"], 
+                                       row["answer4"], row["answer5"]] if a]
 
         textQuestions.append(questions)
         answersList.append(answers)
 
-        questions = []
-        answers = []
+    for idx, row in enumerate(data, start=1):
+        data_from_database[str(idx)] = {
+            'number': idx,
+            'complexity': row['complexity'],
+            'picture': f"/media/{row['photo']}",
+            'textQuestions': textQuestions[idx - 1],
+            'answersList': answersList[idx - 1],
+            'pictureWorld': f"/media/{row['realObjectPhoto']}"
+        }
 
-    data_from_database = {}
-
-    id = 0
-    for row in data:
-        id += 1
-        data_from_database[f'{id}'] = {'number': id, 'complexity': row['complexity'],
-                                       'picture': "/media/" + row["photo"],
-                                       'textQuestions': textQuestions[id - 1],
-                                       'answersList': answersList[id - 1],
-                                       'pictureWorld': "/media/" + row["realObjectPhoto"]}
-
-    keys = [*data_from_database]
+    keys = list(data_from_database.keys())
     random.shuffle(keys)
-    new_data = dict()
-    count = 0
-    for key in keys:
-        count += 1
-        new_data.update({key: data_from_database[key]})
+    shuffled_data = {str(i + 1): data_from_database[key] for i, key in enumerate(keys)}
 
-        new_data[count] = new_data[key]
-        del new_data[key]
+    for i, item in enumerate(shuffled_data.values(), start=1):
+        item["number"] = i
 
-    for i in range(1, len(new_data)):
-        new_data[i]["number"] = i
-
-    json_data = {}
+    json_data: Dict[int, Dict[str, Any]] = {}
     index = 0
-    for i in new_data:
-        if new_data.get(i)['complexity'] == 'A' and len(json_data) < 4:
+
+    # Отбираем по 4 вопроса сложности 'A'
+    for item in shuffled_data.values():
+        if item['complexity'] == 'A' and len([q for q in json_data.values() if q['complexity'] == 'A']) < 4:
             index += 1
-            json_data[index] = new_data.get(i)
-        elif new_data.get(i)['complexity'] == 'B' and 4 <= len(json_data) < 7:
+            json_data[index] = item
+
+    # Отбираем по 3 вопроса сложности 'B'
+    for item in shuffled_data.values():
+        if item['complexity'] == 'B' and len([q for q in json_data.values() if q['complexity'] == 'B']) < 3:
             index += 1
-            json_data[index] = new_data.get(i)
-        elif new_data.get(i)['complexity'] == 'C' and 7 <= len(json_data) < 10:
+            json_data[index] = item
+
+    # Отбираем по 3 вопроса сложности 'C'
+    for item in shuffled_data.values():
+        if item['complexity'] == 'C' and len([q for q in json_data.values() if q['complexity'] == 'C']) < 3:
             index += 1
-            json_data[index] = new_data.get(i)
+            json_data[index] = item
 
     return JsonResponse(json_data)
