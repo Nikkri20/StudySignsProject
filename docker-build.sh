@@ -1,4 +1,13 @@
-if python manage.py test; then
+if command -v python3 &>/dev/null; then
+    PYTHON_CMD="python3"
+elif command -v python &>/dev/null; then
+    PYTHON_CMD="python"
+else
+    echo "Вызов python в вашей системе выполняется иначе, нежели python или python3."
+    exit 1
+fi
+
+if $PYTHON_CMD manage.py test; then
     export $(cat ./.env | grep -v ^# | xargs) > /dev/null
 
     backup_base_dir="./media_backups"
