@@ -18,11 +18,8 @@ from app1.models import Exam, ExamInfo
 def send_exam(request: HttpRequest) -> JsonResponse:
     """
     Извлекает данные о знаках из базы данных, выбирает вопросы и ответы в зависимости от сложности
-    и отправляет их на фронтенд в формате JSON.
-
-    Получает все данные из модели `Exam`, формирует список вопросов и ответов по каждому знаку,
-    удаляет пустые вопросы и ответы, сортирует данные случайным образом и выбирает 10 вопросов
-    (4 с уровнем сложности "A", 3 с уровнем "B" и 3 с уровнем "C").
+    и отправляет их на фронтенд в формате JSON. Гарантированно выбирает 10 вопросов (4 уровня "A", 
+    3 уровня "B" и 3 уровня "C") без случайных результатов.
     """
     data = Exam.objects.all().values(
         "complexity", "photo", "realObjectPhoto", "question1", "answer1", 
@@ -56,28 +53,36 @@ def send_exam(request: HttpRequest) -> JsonResponse:
             'pictureWorld': f"/media/{row['realObjectPhoto']}"
         }
 
+    # Перемешиваем ключи и затем формируем финальный результат
     keys = list(data_from_database.keys())
     random.shuffle(keys)
     shuffled_data = {str(i + 1): data_from_database[key] for i, key in enumerate(keys)}
 
-    for i, key in enumerate(shuffled_data.keys(), start=1):
-        shuffled_data[key]['number'] = i
-
+    # Обеспечиваем точно 10 вопросов с жестким отбором по сложности
     json_data: Dict[int, Dict[str, Any]] = {}
-    index = 0
+    a_count = 0
+    b_count = 0
+    c_count = 0
+    index = 1
+
     for item in shuffled_data.values():
-        if item['complexity'] == 'A' and len(json_data) < 4:
-            index += 1
+        if item['complexity'] == 'A' and a_count < 4:
             json_data[index] = item
-        elif item['complexity'] == 'B' and 4 <= len(json_data) < 7:
+            a_count += 1
             index += 1
+        elif item['complexity'] == 'B' and b_count < 3:
             json_data[index] = item
-        elif item['complexity'] == 'C' and 7 <= len(json_data) < 10:
+            b_count += 1
             index += 1
+        elif item['complexity'] == 'C' and c_count < 3:
             json_data[index] = item
+            c_count += 1
+            index += 1
+
+        if len(json_data) == 10:
+            break
 
     return JsonResponse(json_data)
-
 
 @csrf_exempt
 def get_exam_data(request: HttpRequest) -> JsonResponse:
@@ -104,4 +109,4 @@ def get_exam_data(request: HttpRequest) -> JsonResponse:
 
         t.save(update_fields=["login", "res", "startTime", "time"])
 
-    return JsonResponse({}, status=204)
+    return JsonResponse({}, status=204)                
