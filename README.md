@@ -1,6 +1,7 @@
 ## Cайт для изучения студентами условных топографических знаков
 
-![Снимок экрана 2024-03-19 150319](https://github.com/Nikkri20/StudySignsProject/assets/114663524/e918c86e-f8f4-4813-b7fe-00a006be71b6)
+![изображение](https://github.com/user-attachments/assets/b1953146-e135-4fbb-8b6a-a942328dac7c)
+
 ___
 ## Команда 🤝
 
@@ -11,7 +12,7 @@ ___
 ___
 
 > [!NOTE]
-> Данная документация по проекту была написана Backend-разработчиком (соответственно взгляд на проект может быть не полный). Я попытаюсь описать структуру проекта, описать проблемы и почему были приняты те или иные решения
+> Данная документация по проекту была написана Backend-разработчиком (упор делается на техническую часть)
 
 > [!WARNING]
 > Проект развивается, по возможности буду стараться обновлять всю информацию
@@ -28,10 +29,7 @@ ___
 * [Структура проекта](#4) 🗂️
 * [Как развернуть проект](#5) ⬇️
 * [Про базы данных](#6) 🗄
-
-#### Для пользователей
-* [Для суперпользователя](#7) 🧑🏻‍💻👑
-* [Для пользователя](#8) 🧑🏻‍💻
+* 
 ___
 
 ## Общая информация
@@ -59,38 +57,8 @@ ___
 <a name="3"></a>
 
 ### Стек технологий 📚
-#### Frontend
-<p float="left">
-  <img src="https://user-images.githubusercontent.com/25181517/192158954-f88b5814-d510-4564-b285-dff7d6400dad.png" width="100" />
-  <img src="https://user-images.githubusercontent.com/25181517/183898674-75a4a1b1-f960-4ea9-abcb-637170a00a75.png" width="100" />
-</p>
-<p float="left">
-  <img src="https://user-images.githubusercontent.com/25181517/117447155-6a868a00-af3d-11eb-9cfe-245df15c9f3f.png" width="100" />
-  <img src="https://user-images.githubusercontent.com/25181517/183568594-85e280a7-0d7e-4d1a-9028-c8c2209e073c.png" width="100" />
-</p>
 
-#### Backend
-<p float="left">
-  <img src="https://user-images.githubusercontent.com/25181517/183423507-c056a6f9-1ba8-4312-a350-19bcbc5a8697.png" width="100" />
-  <img src="https://github.com/marwin1991/profile-technology-icons/assets/62091613/9bf5650b-e534-4eae-8a26-8379d076f3b4" width="100" />
-</p>
-
-#### Дизайн
-<img src="https://user-images.githubusercontent.com/25181517/189715289-df3ee512-6eca-463f-a0f4-c10d94a06b2f.png" width="100" />
-
-#### Дополнительные технологии, которые помогают работать над проектом
-
-![PythonAnywhere](https://img.shields.io/badge/pythonanywhere-%232F9FD7.svg?style=for-the-badge&logo=pythonanywhere&logoColor=151515)
-
-![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white)
-
-![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
-
-![Trello](https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white)
-
-![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
-
-![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
+<img src="https://github-readme-tech-stack.vercel.app/api/cards?title=StudySignsProject+Tech+Stack&lineCount=4&line1=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPCEtLSBpY29uNjY2LmNvbSAtIE1JTExJT05TIHZlY3RvciBJQ09OUyBGUkVFIC0tPjxzdmcgdmlld0JveD0iLTMwIDAgNTEyIDUxMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJtMCAwIDMxLjgwMDc4MSA0NDguMTAxNTYyIDE5NC4zOTg0MzggNjMuODk4NDM4IDE5NC4zOTg0MzctNjMuODk4NDM4IDMxLjgwMDc4Mi00NDguMTAxNTYyem0wIDAiIGZpbGw9IiNmZjc4MTYiPjwvcGF0aD48cGF0aCBkPSJtNDUyLjM5ODQzOCAwLTMxLjgwMDc4MiA0NDguMTAxNTYyLTE5NC4zOTg0MzcgNjMuODk4NDM4di01MTJ6bTAgMCIgZmlsbD0iI2ZmNGIwMCI%2BPC9wYXRoPjxwYXRoIGQ9Im0zNjcuNSAxMzZoLTIyMi4zMDA3ODFsNS4zOTg0MzcgNzVoMjExLjUwMzkwNmwtMTIuOTAyMzQzIDE4MS41OTc2NTYtMTIzIDQxLjEwMTU2My0xMjMtNDEuMTAxNTYzLTQuMTk5MjE5LTYwLjU5NzY1Nmg2MGwxLjE5OTIxOSAxNi41IDY2IDIxLjg5ODQzOCA2Ni0yMS44OTg0MzggNS4zOTg0MzctNzcuNWgtMjAzLjA5NzY1NmwtMTMuODAwNzgxLTE5NWgyOTF6bTAgMCIgZmlsbD0iI2VjZWNmMSI%2BPC9wYXRoPjxnIGZpbGw9IiNlMmUyZTciPjxwYXRoIGQ9Im0zNjIuMTAxNTYyIDIxMS0xMi45MDIzNDMgMTgxLjU5NzY1Ni0xMjMgNDEuMTAxNTYzdi02My4zMDA3ODFsNjYtMjEuODk4NDM4IDUuMzk4NDM3LTc3LjVoLTcxLjM5ODQzN3YtNjB6bTAgMCI%2BPC9wYXRoPjxwYXRoIGQ9Im0zNzEuNjk5MjE5IDc2LTQuMTk5MjE5IDYwaC0xNDEuMzAwNzgxdi02MHptMCAwIj48L3BhdGg%2BPC9nPjwvc3ZnPg%3D%3D%2Chtml%2C%3Bdata%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4IiBpZD0iY3NzMyI%2BCiAgPHBhdGggZmlsbD0iIzE1NzJCNiIgZD0iTTE4LjgxNCAxMTQuMTIzbC0xMC4wNTQtMTEyLjc3MWgxMTAuNDhsLTEwLjA2NCAxMTIuNzU0LTQ1LjI0MyAxMi41NDMtNDUuMTE5LTEyLjUyNnoiPjwvcGF0aD4KICA8cGF0aCBmaWxsPSIjMzNBOURDIiBkPSJNNjQuMDAxIDExNy4wNjJsMzYuNTU5LTEwLjEzNiA4LjYwMS05Ni4zNTRoLTQ1LjE2djEwNi40OXoiPjwvcGF0aD4KICA8cGF0aCBmaWxsPSIjZmZmIiBkPSJNNjQuMDAxIDUxLjQyOWgxOC4zMDJsMS4yNjQtMTQuMTYzaC0xOS41NjZ2LTEzLjgzMWgzNC42ODE5OTk5OTk5OTk5OTVsLS4zMzIgMy43MTEtMy40IDM4LjExNGgtMzAuOTV2LTEzLjgzMXoiPjwvcGF0aD4KICA8cGF0aCBmaWxsPSIjRUJFQkVCIiBkPSJNNjQuMDgzIDg3LjM0OWwtLjA2MS4wMTgtMTUuNDAzLTQuMTU5LS45ODUtMTEuMDMxaC0xMy44ODJsMS45MzcgMjEuNzE3IDI4LjMzMSA3Ljg2My4wNjMtLjAxOHYtMTQuMzl6Ij48L3BhdGg%2BCiAgPHBhdGggZmlsbD0iI2ZmZiIgZD0iTTgxLjEyNyA2NC42NzVsLTEuNjY2IDE4LjUyMi0xNS40MjYgNC4xNjR2MTQuMzlsMjguMzU0LTcuODU4LjIwOC0yLjMzNyAyLjQwNi0yNi44ODFoLTEzLjg3NnoiPjwvcGF0aD4KICA8cGF0aCBmaWxsPSIjRUJFQkVCIiBkPSJNNjQuMDQ4IDIzLjQzNXYxMy44MzEwMDAwMDAwMDAwMDFoLTMzLjQwNzk5OTk5OTk5OTk5NGwtLjI3Ny0zLjEwOC0uNjMtNy4wMTItLjMzMS0zLjcxMWgzNC42NDZ6TTY0LjAwMSA1MS40MzF2MTMuODMxMDAwMDAwMDAwMDAxaC0xNS4yMDlsLS4yNzctMy4xMDgtLjYzMS03LjAxMi0uMzMtMy43MTFoMTYuNDQ3eiI%2BPC9wYXRoPgo8L3N2Zz4K%2Ccss%2C%3Bdata%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNTAwIiBoZWlnaHQ9IjI1MDAiIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaW5ZTWluIG1lZXQiIHZpZXdCb3g9IjAgMCAyNTYgMjU2IiBpZD0iamF2YXNjcmlwdCI%2BCiAgPHBhdGggZmlsbD0iI0Y3REYxRSIgZD0iTTAgMGgyNTZ2MjU2SDBWMHoiPjwvcGF0aD4KICA8cGF0aCBkPSJNNjcuMzEyIDIxMy45MzJsMTkuNTktMTEuODU2YzMuNzggNi43MDEgNy4yMTggMTIuMzcxIDE1LjQ2NSAxMi4zNzEgNy45MDUgMCAxMi44OS0zLjA5MiAxMi44OS0xNS4xMnYtODEuNzk4aDI0LjA1N3Y4Mi4xMzhjMCAyNC45MTctMTQuNjA2IDM2LjI1OS0zNS45MTYgMzYuMjU5LTE5LjI0NSAwLTMwLjQxNi05Ljk2Ny0zNi4wODctMjEuOTk2TTE1Mi4zODEgMjExLjM1NGwxOS41ODgtMTEuMzQxYzUuMTU3IDguNDIxIDExLjg1OSAxNC42MDcgMjMuNzE1IDE0LjYwNyA5Ljk2OSAwIDE2LjMyNS00Ljk4NCAxNi4zMjUtMTEuODU4IDAtOC4yNDgtNi41My0xMS4xNy0xNy41MjgtMTUuOThsLTYuMDEzLTIuNThjLTE3LjM1Ny03LjM4Ny0yOC44Ny0xNi42NjctMjguODctMzYuMjU3IDAtMTguMDQ0IDEzLjc0Ny0zMS43OTIgMzUuMjI4LTMxLjc5MiAxNS4yOTQgMCAyNi4yOTIgNS4zMjggMzQuMTk2IDE5LjI0N0wyMTAuMjkgMTQ3LjQzYy00LjEyNS03LjM4OS04LjU5MS0xMC4zMS0xNS40NjUtMTAuMzEtNy4wNDYgMC0xMS41MTQgNC40NjgtMTEuNTE0IDEwLjMxIDAgNy4yMTcgNC40NjggMTAuMTQgMTQuNzc4IDE0LjYwOGw2LjAxNCAyLjU3N2MyMC40NSA4Ljc2NSAzMS45NjMgMTcuNyAzMS45NjMgMzcuODA0IDAgMjEuNjU0LTE3LjAxMiAzMy41MS0zOS44NjcgMzMuNTEtMjIuMzM5IDAtMzYuNzc0LTEwLjY1NC00My44MTktMjQuNTc0Ij48L3BhdGg%2BCjwvc3ZnPgo%3D%2Cjavascript%2C%3Bdata%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4IiBpZD0ibm9kZS1qcyI%2BCiAgPHBhdGggZmlsbD0iIzgzQ0QyOSIgZD0iTTExMi43NzEgMzAuMzM0bC00NC4wOTctMjUuNjA1Yy0yLjc4MS0xLjU4NC02LjQwMi0xLjU4NC05LjIwNSAwbC00NC41NjggMjUuNjA1Yy0yLjg3IDEuNjUxLTQuOTAxIDQuNzU0LTQuOTAxIDguMDczdjUxLjE0MmMwIDMuMzE5IDIuMDg0IDYuNDIzIDQuOTU0IDguMDgzbDExLjc3NSA2LjY4OGM1LjYyOCAyLjc3MiA3LjYxNyAyLjc3MiAxMC4xNzggMi43NzIgOC4zMzMgMCAxMy4wOTMtNS4wMzkgMTMuMDkzLTEzLjgyOHYtNTAuNDljMC0uNzEzLS4zNzEtMS43NzQtMS4wNzEtMS43NzRoLTUuNjIzYy0uNzEyIDAtMi4zMDYgMS4wNjEtMi4zMDYgMS43NzN2NTAuNDljMCAzLjg5Ni0zLjUyNCA3Ljc3My0xMC4xMSA0LjQ4bC0xMi4xNjctNy4wMTNjLS40MjQtLjIzLS43MjMtLjY5My0uNzIzLTEuMTgxdi01MS4xNDJjMC0uNDgyLjU1NS0uOTY2Ljk4Mi0xLjIxM2w0NC40MjQtMjUuNTYxYy40MTUtLjIzNSAxLjAyNS0uMjM1IDEuNDM5IDBsNDMuODgyIDI1LjU1NWMuNDIuMjUzLjI3Mi43MjIuMjcyIDEuMjE5djUxLjE0MmMwIC40ODguMTgzLjk2My0uMjMyIDEuMTk4bC00NC4wODYgMjUuNTc2Yy0uMzc4LjIyNy0uODQ3LjIyNy0xLjI2MSAwbC0xMS4zMDctNi43NDljLS4zNDEtLjE5OC0uNzQ2LS4yNjktMS4wNzMtLjA4Ni0zLjE0NiAxLjc4My0zLjcyNiAyLjAyLTYuNjc3IDMuMDQzLS43MjYuMjUzLTEuNzk3LjY5Mi40MSAxLjkyOWwxNC43OTggOC43NTRjMS40MTcuODIgMy4wMjcgMS4yNDYgNC42NDcgMS4yNDYgMS42NDIgMCAzLjI1LS40MjYgNC42NjctMS4yNDZsNDMuODg1LTI1LjU4MmMyLjg3LTEuNjcyIDQuMjMtNC43NjQgNC4yMy04LjA4M3YtNTEuMTQyYzAtMy4zMTktMS4zNi02LjQxNC00LjIyOS04LjA3M3pNNzcuOTEgODEuNDQ1Yy0xMS43MjYgMC0xNC4zMDktMy4yMzUtMTUuMTctOS4wNjYtLjEtLjYyOC0uNjMzLTEuMzc5LTEuMjcyLTEuMzc5aC01LjczMWMtLjcwOSAwLTEuMjc5Ljg2LTEuMjc5IDEuNTY2IDAgNy40NjYgNC4wNTkgMTYuNTEyIDIzLjQ1MyAxNi41MTIgMTQuMDM5IDAgMjIuMDg4LTUuNDU1IDIyLjA4OC0xNS4xMDkgMC05LjU3Mi02LjQ2Ny0xMi4wODQtMjAuMDgyLTEzLjg4Ni0xMy43NjItMS44MTktMTUuMTYtMi43MzgtMTUuMTYtNS45NjIgMC0yLjY1OCAxLjE4NC02LjIwMyAxMS4zNzQtNi4yMDMgOS4xMDUgMCAxMi40NjEgMS45NTQgMTMuODQyIDguMDkxLjExOC41NzcuNjQ1Ljk5MSAxLjI0Ljk5MWg1Ljc1NGMuMzU0IDAgLjY5Mi0uMTQzLjk0LS4zOTYuMjQtLjI3Mi4zNjctLjYxMy4zMzUtLjk3OS0uODkxLTEwLjU2OC03LjkxMi0xNS40OTMtMjIuMTEyLTE1LjQ5My0xMi42MzEgMC0yMC4xNjYgNS4zMzQtMjAuMTY2IDE0LjI3NSAwIDkuNjk4IDcuNDk3IDEyLjM3OCAxOS42MjIgMTMuNTc3IDE0LjUwNSAxLjQyMiAxNS42MzMgMy41NDIgMTUuNjMzIDYuMzk1IDAgNC45NTUtMy45NzggNy4wNjYtMTMuMzA5IDcuMDY2eiI%2BPC9wYXRoPgo8L3N2Zz4K%2Cnode.js%2C%3B&line2=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDI0IDI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIGlkPSJmaWdtYSI%2BCiAgPHBhdGggZmlsbD0iIzBBQ0Y4MyIgZD0iTTgsMjRjMi4yMDgsMCw0LTEuNzkyLDQtNHYtNEg4Yy0yLjIwOCwwLTQsMS43OTItNCw0QzQsMjIuMjA4LDUuNzkyLDI0LDgsMjRMOCwyNHoiPjwvcGF0aD4KICA8cGF0aCBmaWxsPSIjQTI1OUZGIiBkPSJNNCwxMmMwLTIuMjA4LDEuNzkyLTQsNC00aDR2OEg4QzUuNzkyLDE2LDQsMTQuMjA4LDQsMTJMNCwxMnoiPjwvcGF0aD4KICA8cGF0aCBmaWxsPSIjRjI0RTFFIiBkPSJNNCw0YzAtMi4yMDgsMS43OTItNCw0LTRoNHY4SDhDNS43OTIsOCw0LDYuMjA4LDQsNEw0LDR6Ij48L3BhdGg%2BCiAgPHBhdGggZmlsbD0iIzA5QjQ3MiIgZD0iTTguNDE5LDE2SDhjLTIuMjA4LDAtNCwxLjc5Mi00LDRjMCwyLjIwOCwxLjc5Miw0LDQsNGwwLDBjMC4xNDIsMCwwLjI4MS0wLjAwNywwLjQxOS0wLjAyMlYxNkw4LjQxOSwxNnoiPjwvcGF0aD4KICA8cGF0aCBmaWxsPSIjOEQ0RERFIiBkPSJNOC40MTksOEg4Yy0yLjIwOCwwLTQsMS43OTItNCw0czEuNzkyLDQsNCw0aDAuNDE5VjhMOC40MTksOHoiPjwvcGF0aD4KICA8cGF0aCBmaWxsPSIjRDM0NDFBIiBkPSJNOC40MTksMEg4QzUuNzkyLDAsNCwxLjc5Miw0LDRzMS43OTIsNCw0LDRoMC40MTlWMEw4LjQxOSwweiI%2BPC9wYXRoPgogIDxwYXRoIGZpbGw9IiNGRjcyNjIiIGQ9Ik0xMiwwaDRjMi4yMDgsMCw0LDEuNzkyLDQsNGMwLDIuMjA4LTEuNzkyLDQtNCw0aC00VjBMMTIsMHoiPjwvcGF0aD4KICA8cGF0aCBmaWxsPSIjMUFCQ0ZFIiBkPSJNMjAsMTJjMCwyLjIwOC0xLjc5Miw0LTQsNGMtMi4yMDgsMC00LTEuNzkyLTQtNGMwLTIuMjA4LDEuNzkyLTQsNC00QzE4LjIwOCw4LDIwLDkuNzkyLDIwLDEyTDIwLDEyeiI%2BPC9wYXRoPgogIDxwb2x5Z29uIGZpbGw9IiNERTYzNTUiIHBvaW50cz0iMTYgMCAxMiAwIDEyIDggMTYgOCAxNiA4IDE2IDggMTYgMCAxNiAwIj48L3BvbHlnb24%2BCiAgPHBhdGggZmlsbD0iIzE3QTRERCIgZD0iTTE2LDhMMTYsOGMtMi4yMDgsMC00LDEuNzkyLTQsNGMwLDIuMjA4LDEuNzkyLDQsNCw0bDAsMFY4TDE2LDhMMTYsOHoiPjwvcGF0aD4KPC9zdmc%2BCg%3D%3D%2Cfigma%2C%3B&line3=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNTAwIiBoZWlnaHQ9IjI0OTAiIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaW5ZTWluIG1lZXQiIHZpZXdCb3g9IjAgMCAyNTYgMjU1IiBpZD0icHl0aG9uIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYSIgeDE9IjEyLjk1OSUiIHgyPSI3OS42MzklIiB5MT0iMTIuMDM5JSIgeTI9Ijc4LjIwMSUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMzg3RUI4Ij48L3N0b3A%2BCiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzM2Njk5NCI%2BPC9zdG9wPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYiIgeDE9IjE5LjEyOCUiIHgyPSI5MC43NDIlIiB5MT0iMjAuNTc5JSIgeTI9Ijg4LjQyOSUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjRkZFMDUyIj48L3N0b3A%2BCiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI0ZGQzMzMSI%2BPC9zdG9wPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM%2BCiAgPHBhdGggZmlsbD0idXJsKCNhKSIgZD0iTTEyNi45MTYuMDcyYy02NC44MzIgMC02MC43ODQgMjguMTE1LTYwLjc4NCAyOC4xMTVsLjA3MiAyOS4xMjhoNjEuODY4djguNzQ1SDQxLjYzMVMuMTQ1IDYxLjM1NS4xNDUgMTI2Ljc3YzAgNjUuNDE3IDM2LjIxIDYzLjA5NyAzNi4yMSA2My4wOTdoMjEuNjF2LTMwLjM1NnMtMS4xNjUtMzYuMjEgMzUuNjMyLTM2LjIxaDYxLjM2MnMzNC40NzUuNTU3IDM0LjQ3NS0zMy4zMTlWMzMuOTdTMTk0LjY3LjA3MiAxMjYuOTE2LjA3MnpNOTIuODAyIDE5LjY2YTExLjEyIDExLjEyIDAgMCAxIDExLjEzIDExLjEzIDExLjEyIDExLjEyIDAgMCAxLTExLjEzIDExLjEzIDExLjEyIDExLjEyIDAgMCAxLTExLjEzLTExLjEzIDExLjEyIDExLjEyIDAgMCAxIDExLjEzLTExLjEzeiI%2BPC9wYXRoPgogIDxwYXRoIGZpbGw9InVybCgjYikiIGQ9Ik0xMjguNzU3IDI1NC4xMjZjNjQuODMyIDAgNjAuNzg0LTI4LjExNSA2MC43ODQtMjguMTE1bC0uMDcyLTI5LjEyN0gxMjcuNnYtOC43NDVoODYuNDQxczQxLjQ4NiA0LjcwNSA0MS40ODYtNjAuNzEyYzAtNjUuNDE2LTM2LjIxLTYzLjA5Ni0zNi4yMS02My4wOTZoLTIxLjYxdjMwLjM1NXMxLjE2NSAzNi4yMS0zNS42MzIgMzYuMjFoLTYxLjM2MnMtMzQuNDc1LS41NTctMzQuNDc1IDMzLjMydjU2LjAxM3MtNS4yMzUgMzMuODk3IDYyLjUxOCAzMy44OTd6bTM0LjExNC0xOS41ODZhMTEuMTIgMTEuMTIgMCAwIDEtMTEuMTMtMTEuMTMgMTEuMTIgMTEuMTIgMCAwIDEgMTEuMTMtMTEuMTMxIDExLjEyIDExLjEyIDAgMCAxIDExLjEzIDExLjEzIDExLjEyIDExLjEyIDAgMCAxLTExLjEzIDExLjEzeiI%2BPC9wYXRoPgo8L3N2Zz4K%2Cpython%2C%3Bdata%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTYzIiBoZWlnaHQ9IjI1MDAiIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaW5ZTWluIG1lZXQiIHZpZXdCb3g9IjAgMCAyNTYgMzI2IiBpZD0iZGphbmdvIj4KICA8ZyBmaWxsPSIjMkJBOTc3Ij4KICAgIDxwYXRoIGQ9Ik0xMTQuNzg0IDBoNTMuMjc4djI0NC4xOTFjLTI3LjI5IDUuMTYyLTQ3LjM4IDcuMTkzLTY5LjExNyA3LjE5M0MzMy44NzMgMjUxLjMxNiAwIDIyMi4yNDUgMCAxNjYuNDEyYzAtNTMuNzk1IDM1LjkzLTg4LjcwOCA5MS42MDgtODguNzA4IDguNjQgMCAxNS4yMjIuNjggMjMuMTc2IDIuNzE3VjB6bTEuODY3IDEyNC40MjdjLTYuMjQtMi4wMzgtMTEuMzgyLTIuNzE3LTE3Ljk2NS0yLjcxNy0yNi45NDcgMC00Mi41MTIgMTYuNDM3LTQyLjUxMiA0NS4yNDMgMCAyOC4wNDYgMTQuODggNDMuNTMyIDQyLjE3IDQzLjUzMiA1Ljg5NiAwIDEwLjY5Ni0uMzMyIDE4LjMwNy0xLjM1MXYtODQuNzA3eiI%2BPC9wYXRoPgogICAgPHBhdGggZD0iTTI1NS4xODcgODQuMjZ2MTIyLjI2M2MwIDQyLjEwNS0zLjE1NCA2Mi4zNTMtMTIuNDExIDc5LjgxLTguNjQgMTYuNzgzLTIwLjAyMiAyNy4zNjYtNDMuNTQxIDM5LjA1NWwtNDkuNDM4LTIzLjI5N2MyMy41MTktMTAuOTMgMzQuOTAxLTIwLjU4OCA0Mi4xNy0zNS4zMjcgNy42MS0xNS4wNzIgMTAuMDEtMzIuNTI5IDEwLjAxLTc4LjQ0NVY4NC4yNjFoNTMuMjF6TTE5Ni42MDggMGg1My4yNzh2NTQuMTM1aC01My4yNzhWMHoiPjwvcGF0aD4KICA8L2c%2BCjwvc3ZnPgo%3D%2Cdjango%2C%3B&line4=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4IiBpZD0idWJ1bnR1Ij4KICA8cGF0aCBmaWxsPSIjREQ0ODE0IiBkPSJNNjQgMy4yNDZjLTMzLjU1NSAwLTYwLjc1NSAyNy4yLTYwLjc1NSA2MC43NTQgMCAzMy41NTIgMjcuMiA2MC43NTQgNjAuNzU1IDYwLjc1NCAzMy41NTQgMCA2MC43NTUtMjcuMjAyIDYwLjc1NS02MC43NTQgMC0zMy41NTQtMjcuMi02MC43NTQtNjAuNzU1LTYwLjc1NHptMTMuNjMxIDIwLjkyMmMyLjI0Mi0zLjg4MSA3LjItNS4yMSAxMS4wOC0yLjk3MiAzLjg4IDIuMjQyIDUuMjA4IDcuMiAyLjk2NiAxMS4wOC0yLjIzOCAzLjg4LTcuMTk3IDUuMjA4LTExLjA3NyAyLjk2Ny0zLjg3Ny0yLjIzOS01LjIwNi03LjE5OC0yLjk2OS0xMS4wNzV6bS0xMy42MzEgNC41OTVjMy4yNjIgMCA2LjQxNy40NTMgOS40MTQgMS4yODEuNTI5IDMuMjU5IDIuNDYzIDYuMjYyIDUuNTQ4IDguMDQyIDMuMDc5IDEuNzc1IDYuNjQyIDEuOTUzIDkuNzI1Ljc4OSA1Ljk5OCA1Ljg5OCA5LjkwMSAxMy45MTkgMTAuNDcgMjIuODU0bC0xMS41NTguMTdjLTEuMDY3LTEyLjEwMy0xMS4yMjItMjEuNTkzLTIzLjU5OS0yMS41OTMtMy41NjUgMC02Ljk0OC43OTItOS45OCAyLjIwM2wtNS42MzctMTAuMDk5YzQuNzA4LTIuMzMgMTAuMDEtMy42NDcgMTUuNjE3LTMuNjQ3em0tNDEuMzExIDQzLjM0OWMtNC40ODIgMC04LjExMy0zLjYzMi04LjExMy04LjExMiAwLTQuNDgxIDMuNjMtOC4xMTMgOC4xMTMtOC4xMTMgNC40NzkgMCA4LjExMSAzLjYzMSA4LjExMSA4LjExMyAwIDQuNDc5LTMuNjMyIDguMTEyLTguMTExIDguMTEyem03LjE5MS43MjJjMi41NjEtMi4wOSA0LjItNS4yNzEgNC4yLTguODM0IDAtMy41NjUtMS42MzktNi43NDctNC4yLTguODM2IDIuMTk0LTguNDg5IDcuNDc1LTE1LjczOCAxNC41NzEtMjAuNDgzbDUuOTMxIDkuOTM0Yy02LjA5MiA0LjI4Ny0xMC4wNzQgMTEuMzY5LTEwLjA3NCAxOS4zODVzMy45ODEgMTUuMDk4IDEwLjA3NCAxOS4zODNsLTUuOTMxIDkuOTM3Yy03LjA5OS00Ljc0NC0xMi4zOC0xMS45OTUtMTQuNTcxLTIwLjQ4NnptNTguODMxIDMzLjk2NGMtMy44NzkgMi4yNDEtOC44MzguOTEyLTExLjA3Ny0yLjk2OS0yLjI0MS0zLjg3Ny0uOTExLTguODM1IDIuOTY5LTExLjA3NiAzLjg3Ny0yLjIzOSA4LjgzOC0uOTA4IDExLjA3NyAyLjk2OSAyLjI0IDMuODguOTEgOC44MzktMi45NjkgMTEuMDc2em0tLjAyNC0xNy42NzNjLTMuMDgzLTEuMTY2LTYuNjQ1LS45OTEtOS43MjUuNzg4LTMuMDg0IDEuNzgzLTUuMDE5IDQuNzgyLTUuNTQ3IDguMDQyLTIuOTk4LjgzLTYuMTUzIDEuMjg0LTkuNDE1IDEuMjg0LTUuNjA3IDAtMTAuOTA5LTEuMzE4LTE1LjYxNi0zLjY0OWw1LjYzNi0xMC4xYzMuMDMyIDEuNDExIDYuNDE1IDIuMjA0IDkuOTggMi4yMDQgMTIuMzc4IDAgMjIuNTMyLTkuNDg4IDIzLjU5Ni0yMS41OTJsMTEuNTYxLjE2OWMtLjU2OSA4LjkzNS00LjQ3MiAxNi45NTYtMTAuNDcgMjIuODU0eiI%2BPC9wYXRoPgo8L3N2Zz4K%2Cubuntu%2C%3Bdata%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgdmlld0JveD0iMCAwIDEyMCAxMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI%2BCjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMF8yNDg4XzcwNDMpIj4KPHBhdGggZD0iTTIwIDYwQzIwIDM3LjkwODYgMzcuOTA4NiAyMCA2MCAyMFYyMEM4Mi4wOTE0IDIwIDEwMCAzNy45MDg2IDEwMCA2MFY2MEMxMDAgODIuMDkxNCA4Mi4wOTE0IDEwMCA2MCAxMDBWMTAwQzM3LjkwODYgMTAwIDIwIDgyLjA5MTQgMjAgNjBWNjBaIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNNTkuOTk5OCAxMjBDNDUuMDg5OSAxMTkuNjQgMzkuMTg3NyAxMDkuNjczIDM3LjM4NjEgMTAwLjA0N0MzNi40MDgyIDk0LjgxNDQgMzYuODM3MSA4Ni4xMTM4IDM3LjM4NjEgODMuMDA4M0MzOC4yNzgzIDc3Ljk0NjggMzkuNzE5NiA3MC42NzIgNDEuMzE1MiA2Mi4yMzA1QzQzLjU5NzIgNTAuMTM0NCA0OS42NTM4IDQzLjI1NDIgNjIuNzI3OSA0MC44MDA3TDg0LjExMzIgMzYuNzE2N0M4NC42Nzk0IDMzLjU0MjUgODUuNzUzMyAyNS4xMzU4IDg0Ljc3NTMgMTkuOTU0MkM4Mi45NTY2IDEwLjIyNTkgNzUuNDU4OCAwLjE1NDQxOSA2MC4yNCAyLjE3OTUzZS0wNkMyNy4wOTE2IDUuMDc3NDVlLTA2IC0wLjAwMDIxNDEzNyAyNi44NTE2IC0wLjAwMDIxMTIzOSA2MEMtMC4wMDAyMDgzNDEgOTMuMTQ4NCAyNi44NTE0IDEyMCA1OS45OTk4IDEyMFoiIGZpbGw9IiM5RUI5RkYiLz4KPHBhdGggZD0iTTU5Ljk5OTggMEM3NC45MDk3IDAuMzYwMzA5IDgyLjI4NzQgMTAuMzQ2IDg0LjA4OSAxOS45NzE0Qzg1LjA2NyAyNS4yMDQ1IDgzLjE2MjUgMzMuODg2MiA4Mi42MTM0IDM2Ljk5MTdDODEuNzIxMiA0Mi4wNTMyIDgwLjI4IDQ5LjMyOCA3OC42ODQzIDU3Ljc2OTVDNzYuNDAyNCA2OS44NjU2IDcwLjM0NTggNzYuNzQ1OCA1Ny4yNzE3IDc5LjE5OTNMMzcuMzcwOSA4My4xMDY2QzM2LjgwNDcgODYuMjgwNyAzNC45MzQ1IDk0Ljg1OTUgMzUuOTEyNSAxMDAuMDQxQzM3LjczMTIgMTA5Ljc2OSA0NC41NDA4IDExOS44NDYgNTkuNzU5NiAxMjBDOTIuOTA4IDEyMCAxMjAgOTMuMTQ4NCAxMjAgNjBDMTIwIDI2Ljg1MTYgOTMuMTQ4MiAwIDU5Ljk5OTggMFoiIGZpbGw9IiM1MjgyRkYiLz4KPC9nPgo8ZGVmcz4KPGNsaXBQYXRoIGlkPSJjbGlwMF8yNDg4XzcwNDMiPgo8cmVjdCB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgZmlsbD0id2hpdGUiLz4KPC9jbGlwUGF0aD4KPC9kZWZzPgo8L3N2Zz4K%2Cyandex+cloud%2C%3Bdata%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB2aWV3Qm94PSIwIDAgNDggNDgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjI1MDAiIGhlaWdodD0iMjUwMCI%2BPHBhdGggZD0iTTAgMGg0OHY0OEgweiIgZmlsbD0iI2ZmZDAyZiIvPjxwYXRoIGQ9Ik0zMi43MDggNi40aC01LjEyNGw0LjU0OSA3LjA1LTkuNjE3LTcuMDVoLTUuMTI0bDQuNTQ5IDkuMjM4TDEyLjMyNCA2LjRINy4ybDQuNDc0IDExLjkyNkw3LjIgNDEuNmg1LjEyNGw5LjYxNy0yNC45NTVMMTcuMzkyIDQxLjZoNS4xMjRsOS42MTctMjcuMTQyLTQuNTQ5IDI3LjE0Mmg1LjEyNEw0Mi40IDExLjc4NXoiIGZpbGw9IiMwNTAwMzgiLz48L3N2Zz4%3D%2Cmiro%2C%3B" alt="StudySignsProject Tech Stack" />
 
 [К оглавлению](#0) ⬆️
 ___
@@ -105,141 +73,6 @@ ___
 > [!NOTE]
 > Кратко описал предназначение каждого элемента для быстрого вкатывания в проект, для более подробной и точной информации лучше ознакомиться с официальной документацией Django: https://docs.djangoproject.com/en/5.0/ 
 
->📁 **app1 (_файлы приложения app1_)**
-
->>📁 **migrations (_папка для хранения миграций_)**
-
->>>📄 **__init__.py (_файл, который показывает python, что эта дирректория является пакетом_)**
-
->>📄 **__init__.py (_файл, который показывает python, что эта дирректория является пакетом_)**
-
->>📄 **admin.py (_файл для отображения моделей в админке_)**
-
->>📄 **apps.py (_настройка приложения_)**
-
->>📄 **forms.py (_файл для работы с формами_)**
-
->>📄 **models.py (_файл для создания моделей_)**
-
->>📄 **tests.py (файл для создания тестов)**
-
->>📁 **views (_Представления (Views) — главные составляющие веб-приложений на основе Django_)**
-
->>>📄 **__init__.py (_файл, который показывает python, что эта дирректория является пакетом_)**
-
->>>📄 **_account.py (_файл, который содержит функции для работы аккаунта_)**
-
->>>📄 **_authentication.py (_файл, который содержит функции для работы аутентификации пользователя_)**
-
->>>📄 **_exam.py (_файл, который содержит функции для работы экзамена_)**
-
->>>📄 **_feedback.py (_файл, который содержит функции для работы формы обратной связи_)**
-
->>>📄 **_page_rendering.py (_файл, который содержит функции для рендеринга страниц сайта_)**
-
->>>📄 **_signs.py (_файл, который содержит функции для раздела "Смотреть"_)**
-
->>>📄 **_statement.py (_файл, который содержит функции для работы с ведомостью_)**
-
->>>📄 **_test.py (_файл, который содержит функции для работы теста_)**
-
->📁 **node_modules (_папка с модулями для Node.js_)**
-
->>📄 **.package-lock.json (_описывает прямые зависимости и их версии + зависимости наших зависимостей, которые использует JavaScript_)**
-
->📁 **static (_статические файлы_)**
-
->>📁 **css (_css страниц_)**
-
->>>📄 **admin.css (_админка_)**
-
->>>📄 **exam-page-style.css (_страница экзамена_)**
-
->>>📄 **index-style.css (_главная страница_)**
-
->>>📄 **personal-account-page-style.css (_аккаунт пользователя_)**
-
->>>📄 **registration-login.css (_страница входа_)**
-
->>>📄 **signs-page-style.css (_страница со списком знаков_)**
-
->>>📄 **test-page-style.css (_тест_)**
-
->>📁 **easytimer.js (_библиотека для js_)**
-
->>>📑 **...**
-
->>📁 **examresults (_папка с результатами экзамена_)**
-
->>>📄 **.gitignore (файл для того, чтобы в гите хранилась пустая папка)**
-
->>📁 **fonts (_папка для шрифтов для ведомости_)**
-
->>>📄 **...**
-
->>📁 **img (_папка с изображениями для сайта_)**
-
->>>📑 **...**
-
->>📁 **js (_js коды страниц_)**
-
->>>📄 **const.js (_константы_)**
-
->>>📄 **exam-page.js (_страница экзамена_)**
-
->>>📄 **index.js (_список знаков_)**
-
->>>📄 **personal-account-page.js (_страница аккаунта пользователя_)**
-
->>>📄 **test-page.js (__страница теста__)**
-
->📁 **templates (_html-шаблоны страниц_)**
-
->>📁 **admin (_html-шаблны для работы с админкой_)**
-
->>>📄 **base_site.html (_админка (щаблон унаследован от стандартного шаблона админки)_)**
-
->>📄 **base.html (_страница регистрации и входа в аккаунт (шаблон унаследован от стандартных шаблонов страниц регистрации и входа в аккаунт)_)**
-
->>📄 **exam-page.html (_страница экзамена_)**
-
->>📄 **index.html (_главная страница_)**
-
->>📄 **login.html (_страница входа_)**
-
->>📄 **personal-account-page.html (_аккаунт пользователя_)**
-
->>📄 **project-page.html (_страница о нас_)**
-
->>📄 **registr.html (_страница регистрации_)**
-
->>📄 **signs-page.html (_список знаков_)**
-
->>📄 **test-page.html (_страница теста_)**
-
->📁 **Проект_по_созданию_обучающего_сайта_топографических_знаков (_содержит основные настройки нашего проекта_)**
-
->>📄 **__init__.py (_файл, который показывает python, что эта дирректория является пакетом_)**
-
->>📄 **asgi.py (_файл для деплоя проекта на сервер (асинхронно)_)**
-
->>📄 **settings.py (_основные настройки Django_)**
-
->>📄 **urls.py (_url-конфиг, этот файл описывает зависимости между выражениями URL-пути и функциями отображениями views_)**
-
->>📄 **wsgi.py (_файл для деплоя проекта на сервер (синхронно)_)**
-
->📄 **.gitignore (_файл, который указывает Git что не отслеживать в проекте_)**
-
->📄 **README.md (_файл с информацией о проекте_)**
-
->📄 **manage.py (_является ссылкой на скрипт django-admin, но с уже предустановленными переменными окружения, указывающими на ваш проект, как для чтения настроек оттуда, так и для управления им при необходимости_)**
-
->📄 **package-lock.json (_описывает прямые зависимости и их версии + зависимости наших зависимостей, которые использует JavaScript_)**
-
->📄 **package.json (_описывает прямые зависимости и их версии, которые использует JavaScript_)**
-
->📄 **requirements.txt (_файл, содержащий список пакетов или библиотек, необходимых для работы над проектом, которые желательно установить перед запуском_)**
 
 [К оглавлению](#0) ⬆️
 ___
@@ -340,96 +173,3 @@ ___
 
 [К оглавлению](#0) ⬆️
 ___
-
-## Для пользователей 👨🏻‍💻👨🏻‍💻👨🏻‍💻
-
-___
-<a name="7"></a>
-
-### Для суперпользователя 🧑🏻‍💻👑
-
-При заходе на сайт нас встречает страница регистрации
-
-![Снимок экрана 2024-03-22 014924](https://github.com/Nikkri20/StudySignsProject/assets/114663524/612ee350-a034-4d93-88fe-32394582dd55)
-
-Нас интересует страница входа в аккаунт, нажмите `Уже есть аккаунт ?`, введите логин/пароль от аккаунта, который обладает статусом "Суперпользователь"
-
-![Снимок экрана 2024-03-22 014940](https://github.com/Nikkri20/StudySignsProject/assets/114663524/0a2be68d-d592-4e8f-a034-4284ad507bdb)
-
-> [!WARNING]
-> Если вы развернули проект на своей машине, то введите те данные, которые вы вводили при создании суперпользователя
-
-Перейдем в личный кабинет, нажав на соответсвующую иконку справа-сверху
-
-![image](https://github.com/Nikkri20/StudySignsProject/assets/114663524/6cccd53e-6670-4646-aa78-9ba65063df2e)
-
-Тут мы можем скачать  ведомость (ведомость содержит в себе данные о пользователе и 10 последних попыток экзамена)
-
-Суперпользователь может самостоятельно добавлять информацию через админку. Переходим на главную страницу, добавляем в адресную строку /admin, вводим логин/пароль, которые мы выдали
-
-> [!WARNING]
-> Если вы развернули проект на своей машине, то введите те данные, которые вы вводили при создании суперпользователя
-
-![image](https://github.com/Nikkri20/StudySignsProject/assets/114663524/e9e34e3f-9992-4746-94db-b4c4e26df366)
-
-Если вам нужна новая категория для знаков, добавляем её через соответствующую вкладку, после добавления категория появится в фильтре на странице `Смотреть`
-
-![image](https://github.com/Nikkri20/StudySignsProject/assets/114663524/bf1b3669-0931-4ed6-9775-8493f181d4fa)
-
-![image](https://github.com/Nikkri20/StudySignsProject/assets/114663524/19c6db76-4684-41e1-b879-624586897b8d)
-
-Чтобы добавить знак, переходим на соответствующую вкладку, заполняем все поля и нажимаем добавить, если всё хорошо, то ваш знак появится на странице `Смотреть` (не забудьте перейти на нужную категорию через фильтр)
-
-![image](https://github.com/Nikkri20/StudySignsProject/assets/114663524/5fb2f982-1727-43d6-8058-2f5c6f5abdbf)
-
-![image](https://github.com/Nikkri20/StudySignsProject/assets/114663524/37adaa6d-7f46-41ae-91f7-7625bf5f2f91)
-
-> [!WARNING]
-> Вы могли заметить, что мы можем выбрать фиксированную сложность знаков через выпадающее меню, вероятно, было бы удобнее сделать тоже самое с категориями, я подумал также, но эти выпадающие менюшки обновляются только при перезагрузке проекта. Сложность это фиксированный набор данных, категории же мы можем добавять в любой момент, но новая категория не появится до тех пор, пока не будет перезагружен сервер. Это временная проблема, она возникает из-за ограничений админки django, в будущем планируется перенести функционал добавления категорий/знаков из админки в личный кабинет (тогда данные будут обновляться сразу же, как обновляются остальные поля в личном кабинете)
-
-<a name="8"></a>
-
-[К оглавлению](#0) ⬆️
-
-___
-
-### Для пользователя 🧑🏻‍💻
-
-При заходе на сайт нас встречает страница регистрации, вводим наши данные (почта должна содержать @urfu). Заполняем данные, они нам будут нужны в будущем
-
-![Снимок экрана 2024-03-22 014924](https://github.com/Nikkri20/StudySignsProject/assets/114663524/612ee350-a034-4d93-88fe-32394582dd55)
-
-На главной странице у нас 3 вкладки, по описанию не трудно догадаться для чего каждая из них
-
-![image](https://github.com/Nikkri20/StudySignsProject/assets/114663524/933e0940-ad17-4af8-a328-99bbd73b5896)
-
-Во вкладке `Смотреть` можно найти все знаки, которые есть на сайте. Для удобавста есть фильтр по категориями, при нажатии на знак выводится польная информация и появляется возможность посмотртеь его вблизи
-
-![image](https://github.com/Nikkri20/StudySignsProject/assets/114663524/2aee81a5-2bf6-46eb-ba94-8cd122cb33a1)
-
-Во вкладке `Учить` можно тренироваться в ответе на вопросы, каждый раз знаки выдаются в случайном порядке, ответы показываются сразу
-
-![image](https://github.com/Nikkri20/StudySignsProject/assets/114663524/0f0f535a-ef23-4344-8c6c-39d27502f04b)
-
-Во вкладке `Экзамен` вам выдается часть вопросов, ответы не показываются, результат идет в личный кабинет и ведомость, присутствует таймер
-
-![image](https://github.com/Nikkri20/StudySignsProject/assets/114663524/728eb48e-1f4e-4f97-a84a-da7c10237c81)
-
-Перейдем в личный кабинет, нажав на соответсвующую иконку справа-сверху
-
-Здесь мы видим последние 10 результатов экзамена и может заполнить поля о себе (чтобы вас смогли найти в ведомости)
-
-![image](https://github.com/Nikkri20/StudySignsProject/assets/114663524/462ac0eb-0c50-42eb-a757-d4bf8274fb94)
-
-Также вы можете отправить нам информацию об ошибках (или просто отзыв)
-
-![image](https://github.com/Nikkri20/StudySignsProject/assets/114663524/1bfaaedf-e13a-4254-9693-44a510c3ded2)
-
-[К оглавлению](#0) ⬆️
-___
-
-Заметки для себя
-
-docker ps -a
-netstat -ntlp
-sudo docker run --net=host image
