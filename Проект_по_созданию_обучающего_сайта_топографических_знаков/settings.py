@@ -22,6 +22,8 @@ env = environ.Env(
     ALLOWED_HOSTS=(list, [])
 )
 
+LOGIN_URL = 'login'
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 environ.Env.read_env(os.path.join(BASE_DIR, '.env'))

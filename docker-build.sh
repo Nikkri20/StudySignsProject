@@ -23,5 +23,5 @@ sudo docker system prune -a
 #sudo docker-compose down --rmi all -v --remove-orphans
 sudo docker-compose up --build -d
 
-aws s3 rm s3://studysignsproject/studysignsproject/ --recursive
-aws s3 cp --recursive $(pwd) s3://studysignsproject/studysignsproject/
+#aws s3 rm s3://studysignsproject/studysignsproject/ --recursive
+#aws s3 cp --recursive $(pwd) s3://studysignsproject/studysignsproject/
