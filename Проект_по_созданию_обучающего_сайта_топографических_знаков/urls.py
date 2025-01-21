@@ -22,16 +22,16 @@ from django.contrib.auth.decorators import login_required
 from app1 import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', views.index_page, name='index'),
-    path('project-page/', views.project_page, name='project'),
-    path('signs-page/', views.signs_page, name='signs'),
-    path('test-page/', views.test_page, name='test'),
-    path('exam-page/', views.exam_page, name='exam'),
-    path('signs-page/send_signs', views.send_signs, name='send_signs'),
-    path('test-page/send_test', views.send_test, name='send_test'),
-    path('exam-page/send_exam', views.send_exam, name='send_exam'),
-    path('signs-page/send_categories', views.send_categories, name='send_categories'),
-    path('test-page/send_to_email', views.send_to_email, name="send_to_email"),
-    path('exam-page/send_to_email', views.send_to_email, name="send_to_email"),
+    path('topography/admin/', admin.site.urls),
+    path('topography/', views.index_page, name='index'),
+    path('topography/project-page/', views.project_page, name='project'),
+    path('topography/signs-page/', views.signs_page, name='signs'),
+    path('topography/test-page/', views.test_page, name='test'),
+    path('topography/exam-page/', views.exam_page, name='exam'),
+    path('topography/signs-page/send_signs', views.send_signs, name='send_signs'),
+    path('topography/test-page/send_test', views.send_test, name='send_test'),
+    path('topography/exam-page/send_exam', views.send_exam, name='send_exam'),
+    path('topography/signs-page/send_categories', views.send_categories, name='send_categories'),
+    path('topography/test-page/send_to_email', views.send_to_email, name="send_to_email"),
+    path('topography/exam-page/send_to_email', views.send_to_email, name="send_to_email"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
