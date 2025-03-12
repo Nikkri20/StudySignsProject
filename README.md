@@ -1,6 +1,6 @@
 ## Cайт для изучения студентами условных топографических знаков
 
-![image](https://github.com/user-attachments/assets/1ee297be-c4c7-4c29-ba3e-aa2517758217)
+https://github.com/user-attachments/assets/cfb8beea-1c82-40e0-b369-a884a3a13b12
 
 ___
 ## Команда 🤝
